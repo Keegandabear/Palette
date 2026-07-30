@@ -1,0 +1,3 @@
+# Palette
+
+GitHub connection test.
