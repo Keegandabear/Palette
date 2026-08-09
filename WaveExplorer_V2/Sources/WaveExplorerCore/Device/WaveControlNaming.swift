@@ -5,12 +5,8 @@ import Foundation
 /// IMPORTANT — where these numbers came from: the entries marked "confirmed"
 /// below are copied directly from the `wave-map.xml` sample map shipped in
 /// the Developer Support Pack (a demo map for the mock app, not necessarily
-/// Tangent's exhaustive physical reference). It only exercises trackball 1
-/// and a handful of buttons/encoders/knobs. The real Wave has three
-/// trackballs and more buttons than this sample uses — get the rest from
-/// Tangent's Wave hardware reference (or by physically pressing every
-/// control while WaveExplorer is running and reading off the control
-/// numbers in the live log — that's a perfectly good way to fill this in).
+/// Tangent's exhaustive physical reference). Physical verification fills in
+/// the controls that the sample map omits.
 ///
 /// This table is intentionally separate from `WaveEvent` and `DeviceManager`
 /// — it's presentation-layer knowledge about ONE specific panel model, not
@@ -40,9 +36,10 @@ public struct WaveControlNaming: Sendable {
         panelID == wavePanelID || (displays == 3 && linesPerDisplay == 5 && charsPerLine == 32)
     }
 
-    /// Confirmed against wave-map.xml. Trackball 1's three axes are each a
-    /// distinct "Encoder" control number on the wire — there is no separate
-    /// trackball message type in TIPC.
+    /// Encoder numbers 0–7 are the top knobs and are intentionally preserved.
+    /// Wheel and trackball labels below include physical verification on the
+    /// real Wave. Secondary trackball axis orientation stays Axis 1/2 until
+    /// X/Y is confirmed with a directional test.
     public static let knownEncoders: [Int: String] = [
         0: "Knob 1",
         1: "Knob 2",
@@ -52,10 +49,16 @@ public struct WaveControlNaming: Sendable {
         5: "Knob 6",
         6: "Knob 7",
         7: "Knob 8",
-        9: "Dial 1 / Trackball 1 Rotate", // "Wave Dial 1" in wave-map.xml
+        9: "Wheel 1 / Trackball 1 Rotate",
+        10: "Wheel 2",
+        11: "Wheel 3",
         12: "Transport Dial",
         13: "Trackball 1 X",
         14: "Trackball 1 Y",
+        15: "Trackball 2 Axis 1",
+        16: "Trackball 2 Axis 2",
+        17: "Trackball 3 Axis 1",
+        18: "Trackball 3 Axis 2",
     ]
 
     public static let knownButtons: [Int: String] = [

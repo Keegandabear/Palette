@@ -46,14 +46,36 @@ The live package contains these main layers:
 
 ## Work completed in this session
 
+### Physical wheel and trackball verification
+
+Keegan physically verified the Wave's wheel and trackball event numbers from
+left to right. The top knobs were explicitly left unchanged:
+
+- Encoders `0`–`7`: top knobs; do not modify based on this pass.
+- Encoder `9`: left wheel above trackball 1, plus trackball 1 rotation.
+- Encoder `13`: trackball 1 X.
+- Encoder `14`: trackball 1 Y.
+- Encoder `10`: middle wheel above trackball 2.
+- Encoders `15` and `16`: trackball 2 axes.
+- Encoder `11`: right wheel above trackball 3.
+- Encoders `17` and `18`: trackball 3 axes.
+- Encoder `12`: transport dial below the buttons.
+
+The secondary trackball pairs are named `Axis 1` and `Axis 2` for now. Their
+physical identity as trackball axes is verified, but the X/Y orientation of
+those two pairs still needs a dedicated directional test. This avoids making
+an unsupported X/Y claim while still giving the controls useful names.
+
 ### Expanded Wave mapping
 
 `WaveControlNaming.swift` now includes all distinct physical control numbers present in the sample Wave map:
 
 - Encoders `0` through `7`: Knobs 1 through 8.
-- Encoder `9`: Dial 1 / Trackball 1 Rotate.
+- Encoders `9`, `10`, and `11`: the three wheels above the trackballs.
 - Encoder `12`: Transport Dial.
 - Encoders `13` and `14`: Trackball 1 X and Y.
+- Encoders `15` and `16`: Trackball 2 Axis 1 and Axis 2.
+- Encoders `17` and `18`: Trackball 3 Axis 1 and Axis 2.
 - Buttons `9`, `10`–`12`, `20`–`22`, `25`, `26`, `30`, `31`, `33`–`40`.
 
 The sample map contains multiple banks, so the same physical number can have different semantic assignments depending on the active mode. The lookup intentionally names the physical control rather than pretending to know the current managed-mode assignment.

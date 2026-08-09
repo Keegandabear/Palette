@@ -26,6 +26,18 @@ final class WaveEventTests: XCTestCase {
         XCTAssertEqual(naming.name(forButton: 40), "Button 40 (Play Forward)")
     }
 
+    func testPhysicallyVerifiedWheelAndTrackballNumbers() {
+        let naming = WaveControlNaming()
+
+        XCTAssertEqual(naming.name(forEncoder: 9), "Encoder 9 (Wheel 1 / Trackball 1 Rotate)")
+        XCTAssertEqual(naming.name(forEncoder: 10), "Encoder 10 (Wheel 2)")
+        XCTAssertEqual(naming.name(forEncoder: 11), "Encoder 11 (Wheel 3)")
+        XCTAssertEqual(naming.name(forEncoder: 15), "Encoder 15 (Trackball 2 Axis 1)")
+        XCTAssertEqual(naming.name(forEncoder: 16), "Encoder 16 (Trackball 2 Axis 2)")
+        XCTAssertEqual(naming.name(forEncoder: 17), "Encoder 17 (Trackball 3 Axis 1)")
+        XCTAssertEqual(naming.name(forEncoder: 18), "Encoder 18 (Trackball 3 Axis 2)")
+    }
+
     func testWavePanelRecognitionUsesKnownIdentityOrDisplayShape() {
         XCTAssertTrue(WaveControlNaming.isWavePanel(panelID: 0xA0001, displays: 1, linesPerDisplay: 1, charsPerLine: 1))
         XCTAssertTrue(WaveControlNaming.isWavePanel(panelID: 123, displays: 3, linesPerDisplay: 5, charsPerLine: 32))
