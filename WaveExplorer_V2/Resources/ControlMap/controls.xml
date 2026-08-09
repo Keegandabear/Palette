@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TangentWave fileType="ControlSystem" fileVersion="3.0">
+    <Capabilities>
+        <Jog enabled="true"/>
+        <Shuttle enabled="false"/>
+        <StatusDisplay lineCount="3"/>
+        <Training enabled="true"/>
+        <CustomControls enabled="true"/>
+    </Capabilities>
+    <Modes>
+        <Mode id="0x00010001">
+            <Name>Config</Name>
+        </Mode>
+        <Mode id="0x00010002">
+            <Name>Grading</Name>
+        </Mode>
+        <Mode id="0x00010003">
+            <Name>Geometry</Name>
+        </Mode>
+    </Modes>
+    <Controls>
+        <Group name="Navigation">
+            <Action id="0x00020001">
+                <Name>Play Forward</Name>
+                <Name9>Play Fwd</Name9>
+            </Action>
+            <Action id="0x00020002">
+                <Name>Stop</Name>
+            </Action>
+            <Action id="0x00020003">
+                <Name>Play Reverse</Name>
+                <Name9>Play Rev</Name9>
+            </Action>
+            <Action id="0x00020004">
+                <Name>Next Clip</Name>
+            </Action>
+            <Action id="0x00020005">
+                <Name>Previous Clip</Name>
+                <Name9>Prev Clip</Name9>
+            </Action>            
+			<Action id="0x00020006">
+                <Name>Next Frame</Name>
+                <Name9>Next Frm</Name9>
+            </Action>
+            <Action id="0x00020007">
+                <Name>Previous Frame</Name>
+                <Name9>Prev Frm</Name9>
+            </Action>
+        </Group>
+		<Group name="Editing">
+            <Action id="0x00050001">
+                <Name>Mark IN</Name>
+            </Action>
+             <Action id="0x00050002">
+                <Name>Mark OUT</Name>
+            </Action>
+			<Action id="0x00050101">
+                <Name>Copy Grade 1</Name>
+                <Name9>Copy 1</Name9>
+            </Action>
+			<Action id="0x00050102">
+                <Name>Copy Grade 2</Name>
+                <Name9>Copy 2</Name9>
+            </Action>
+			<Action id="0x00050103">
+                <Name>Copy Grade 3</Name>
+                <Name9>Copy 3</Name9>
+            </Action>
+			<Action id="0x00050104">
+                <Name>Copy Grade 4</Name>
+                <Name9>Copy 4</Name9>
+            </Action>
+			<Action id="0x00050105">
+                <Name>Copy Grade 5</Name>
+                <Name9>Copy 5</Name9>
+            </Action>
+			<Action id="0x00050106">
+                <Name>Copy Grade 6</Name>
+                <Name9>Copy 6</Name9>
+            </Action>
+			<Action id="0x00050201">
+                <Name>Paste Grade 1</Name>
+                <Name9>Paste 1</Name9>
+            </Action>
+			<Action id="0x00050202">
+                <Name>Paste Grade 2</Name>
+                <Name9>Paste 2</Name9>
+            </Action>
+			<Action id="0x00050203">
+                <Name>Paste Grade 3</Name>
+                <Name9>Paste 3</Name9>
+            </Action>
+			<Action id="0x00050204">
+                <Name>Paste Grade 4</Name>
+                <Name9>Paste 4</Name9>
+            </Action>
+			<Action id="0x00050205">
+                <Name>Paste Grade 5</Name>
+                <Name9>Paste 5</Name9>
+            </Action>
+			<Action id="0x00050206">
+                <Name>Paste Grade 6</Name>
+                <Name9>Paste 6</Name9>
+            </Action>
+        </Group>
+        <Group name="Primary">
+            <Menu id="0x0003001E">
+                <Name>Bypass Primary</Name>
+                <Name14>Byp Primary</Name14>
+                <Name9>Byp Prim</Name9>
+            </Menu>
+            <Parameter id="0x00042001">
+                <Name>Master Saturation</Name>
+                <Name10>Master Sat</Name10>
+                <Name9>Sat</Name9>
+                <MinValue>0.000000</MinValue>
+                <MaxValue>10.000000</MaxValue>
+                <StepSize>0.000100</StepSize>
+            </Parameter>
+            <Parameter id="0x00042002">
+                <Name>Red Saturation</Name>
+                <Name9>Red Sat</Name9>
+                <MinValue>0.000000</MinValue>
+                <MaxValue>10.000000</MaxValue>
+                <StepSize>0.000100</StepSize>
+            </Parameter>
+            <Parameter id="0x00042003">
+                <Name>Green Saturation</Name>
+                <Name9>Grn Sat</Name9>
+                <MinValue>0.000000</MinValue>
+                <MaxValue>10.000000</MaxValue>
+                <StepSize>0.000100</StepSize>
+            </Parameter>
+            <Parameter id="0x00042004">
+                <Name>Blue Saturation</Name>
+                <Name9>Blue Sat</Name9>
+                <MinValue>0.000000</MinValue>
+                <MaxValue>10.000000</MaxValue>
+                <StepSize>0.000100</StepSize>
+            </Parameter>			
+            <Group name="Nested Primary"> <!-- example of nested Group -->
+				<Menu id="0x0003001F">
+					<Name>Enhance Primary</Name>
+					<Name14>Enhance Prim</Name14>
+					<Name9>Enhc Prim</Name9>
+				</Menu>
+				<Menu id="0x0003001A">
+					<Name>Filter Primary</Name>
+					<Name9>Fltr Prim</Name9>
+				</Menu>
+				<Parameter id="0x00032002">
+                    <Name>Primary Red Gain</Name>
+                    <Name9>Red Gain</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>10.0000</MaxValue>
+                    <StepSize>0.0001</StepSize>
+                </Parameter>
+                <Parameter id="0x00032003">
+                    <Name>Primary Green Gain</Name>
+                    <Name9>Grn Gain</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>10.0000</MaxValue>
+                    <StepSize>0.0001</StepSize>
+                </Parameter>
+                <Parameter id="0x00032004">
+                    <Name>Primary Blue Gain</Name>
+                    <Name9>Blue Gain</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>10.0000</MaxValue>
+                    <StepSize>0.0001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033001">
+                    <Name>Primary Lift Master</Name>
+                    <Name12>Lift Master</Name12>
+                    <Name9>L Master</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033002">
+                    <Name>Primary Lift Diff X</Name>
+                    <Name12>Lift Diff-X</Name12>
+                    <Name9>L Diff-X</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033003">
+                    <Name>Primary Lift Diff Y</Name>
+                    <Name12>Lift Diff-Y</Name12>
+                    <Name9>L Diff-Y</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+				<Binding name="Primary Lift"> <!-- example of 3D Binding -->
+					<Member id="0x00033002"/> <!-- X axis first -->
+					<Member id="0x00033003"/> <!-- Y axis next -->
+					<Member id="0x00033001"/> <!-- Z axis last -->
+				</Binding>
+				<Parameter id="0x00033011">
+                    <Name>Primary Gamma Master</Name>
+                    <Name12>Gamma Master</Name12>
+                    <Name9>G Master</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033012">
+                    <Name>Primary Gamma Diff X</Name>
+                    <Name12>Gamma Diff-X</Name12>
+                    <Name9>G Diff-X</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033013">
+                    <Name>Primary Gamma Diff Y</Name>
+                    <Name12>Gamma Diff-Y</Name12>
+                    <Name9>G Diff-Y</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+				<Binding name="Primary Gamma"> <!-- example of 3D Binding -->
+					<Member id="0x00033012"/> <!-- X axis first -->
+					<Member id="0x00033013"/> <!-- Y axis next -->
+					<Member id="0x00033011"/> <!-- Z axis last -->
+				</Binding>
+               <Parameter id="0x00033021">
+                    <Name>Primary Gain Master</Name>
+                    <Name12>Gain Master</Name12>
+                    <Name9>G Master</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033022">
+                    <Name>Primary Gain Diff X</Name>
+                    <Name12>Gain Diff-X</Name12>
+                    <Name9>G Diff-X</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+                <Parameter id="0x00033023">
+                    <Name>Primary Gain Diff Y</Name>
+                    <Name12>Gain Diff-Y</Name12>
+                    <Name9>G Diff-Y</Name9>
+                    <MinValue>0.0000</MinValue>
+                    <MaxValue>100.0000</MaxValue>
+                    <StepSize>0.001</StepSize>
+                </Parameter>
+				<Binding name="Primary Gain"> <!-- example of 3D Binding -->
+					<Member id="0x00033022"/> <!-- X axis first -->
+					<Member id="0x00033023"/> <!-- Y axis next -->
+					<Member id="0x00033021"/> <!-- Z axis last -->
+				</Binding>
+			</Group>
+        </Group>
+        <Parameter id="0x00030004"> <!-- example of top level parameter -->
+            <Name>Random Top Level Parameter</Name>
+            <Name9>Top Level</Name9>
+			<Name12>Rnd Top Lvl</Name12>
+            <MinValue>0.0000</MinValue>
+            <MaxValue>1.0000</MaxValue>
+            <StepSize>0.0001</StepSize>
+        </Parameter>
+        <Group name="Format Selection">
+            <Menu id="0x00040001">
+                <Name>Select Input</Name>
+                <Name12>Select I/P</Name12>
+            </Menu>    
+            <Menu id="0x00040002">
+                <Name>Select Output</Name>
+                <Name12>Select O/P</Name12>
+            </Menu>    
+            <Menu id="0x00040003">
+                <Name>Bit Depth</Name>
+            </Menu>    
+        </Group>
+        <Menu id="0x00040004"> <!-- example of top level menu -->
+            <Name>Top Level Menu</Name>
+            <Name10>Top Menu</Name10>
+        </Menu>
+		<Group name="Geometry">
+			<Parameter id="0x00060001">
+				<Name>Position X</Name>
+				<Name9>Pos X</Name9>
+				<MinValue>0.0000</MinValue>
+				<MaxValue>100.0000</MaxValue>
+				<StepSize>0.01</StepSize>
+			</Parameter>
+			<Parameter id="0x00060002">
+				<Name>Position Y</Name>
+				<Name9>Pos Y</Name9>
+				<MinValue>0.0000</MinValue>
+				<MaxValue>100.0000</MaxValue>
+				<StepSize>0.01</StepSize>
+			</Parameter>
+			<Parameter id="0x00060003">
+				<Name>Rotate</Name>
+				<MinValue>0</MinValue>
+				<MaxValue>360</MaxValue>
+				<StepSize>0.1</StepSize>
+			</Parameter>
+			<Parameter id="0x00060010">
+				<Name>Zoom</Name>
+				<MinValue>0</MinValue>
+				<MaxValue>100</MaxValue>
+				<StepSize>0.001</StepSize>
+			</Parameter>
+			<Binding name="Position"> <!-- example of 2D Binding -->
+				<Member id="0x00060001"/> <!-- X axis first -->
+				<Member id="0x00060002"/> <!-- Y axis next -->
+			</Binding>
+            <Menu id="0x00060011">
+                <Name>Flip X</Name>
+            </Menu>    
+			<Menu id="0x00060012">
+                <Name>Flip Y</Name>
+            </Menu>    
+			<Menu id="0x00060021">
+                <Name>Mirror X</Name>
+            </Menu> 
+			<Menu id="0x00060022">
+                <Name>Mirror Y</Name>
+            </Menu>
+ 			<Menu id="0x00060031">
+                <Name>Rotate 90 CW</Name>
+				<Name9>R 90 CW</Name9>
+            </Menu> 
+			<Menu id="0x00060032">
+                <Name>Rotate 90 CCW</Name>
+				<Name9>R 90 CCW</Name9>
+            </Menu> 
+		</Group>
+    </Controls>
+    <DefaultGlobalSettings>
+        <KnobSensitivity std="1" alt="5"/>
+        <JogDialSensitivity std="1" alt="5"/>
+        <TrackerballSensitivity std="1" alt="5"/>
+        <TrackerballDialSensitivity std="1" alt="5"/>
+        <IndependentPanelBanks enabled="false"/>
+    </DefaultGlobalSettings>
+</TangentWave>
