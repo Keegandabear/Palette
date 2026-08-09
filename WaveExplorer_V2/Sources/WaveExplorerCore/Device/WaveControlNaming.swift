@@ -38,8 +38,8 @@ public struct WaveControlNaming: Sendable {
 
     /// Encoder numbers 0–7 are the top knobs and are intentionally preserved.
     /// Wheel and trackball labels below include physical verification on the
-    /// real Wave. Secondary trackball axis orientation stays Axis 1/2 until
-    /// X/Y is confirmed with a directional test.
+    /// real Wave. Trackball 2 and 3 X/Y labels below come from the final
+    /// left-to-right and up-to-down directional verification pass.
     public static let knownEncoders: [Int: String] = [
         0: "Knob 1",
         1: "Knob 2",
@@ -49,16 +49,16 @@ public struct WaveControlNaming: Sendable {
         5: "Knob 6",
         6: "Knob 7",
         7: "Knob 8",
-        9: "Wheel 1 / Trackball 1 Rotate",
-        10: "Wheel 2",
-        11: "Wheel 3",
+        9: "Trackball 1 Rotate",
+        10: "Trackball 2 Rotate",
+        11: "Trackball 3 Rotate",
         12: "Transport Dial",
         13: "Trackball 1 X",
         14: "Trackball 1 Y",
-        15: "Trackball 2 Axis 1",
-        16: "Trackball 2 Axis 2",
-        17: "Trackball 3 Axis 1",
-        18: "Trackball 3 Axis 2",
+        15: "Trackball 2 X",
+        16: "Trackball 2 Y",
+        17: "Trackball 3 X",
+        18: "Trackball 3 Y",
     ]
 
     public static let knownButtons: [Int: String] = [

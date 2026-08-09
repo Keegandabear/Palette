@@ -26,16 +26,19 @@ final class WaveEventTests: XCTestCase {
         XCTAssertEqual(naming.name(forButton: 40), "Button 40 (Play Forward)")
     }
 
-    func testPhysicallyVerifiedWheelAndTrackballNumbers() {
+    func testFinalPhysicallyVerifiedWheelAndTrackballMappings() {
         let naming = WaveControlNaming()
 
-        XCTAssertEqual(naming.name(forEncoder: 9), "Encoder 9 (Wheel 1 / Trackball 1 Rotate)")
-        XCTAssertEqual(naming.name(forEncoder: 10), "Encoder 10 (Wheel 2)")
-        XCTAssertEqual(naming.name(forEncoder: 11), "Encoder 11 (Wheel 3)")
-        XCTAssertEqual(naming.name(forEncoder: 15), "Encoder 15 (Trackball 2 Axis 1)")
-        XCTAssertEqual(naming.name(forEncoder: 16), "Encoder 16 (Trackball 2 Axis 2)")
-        XCTAssertEqual(naming.name(forEncoder: 17), "Encoder 17 (Trackball 3 Axis 1)")
-        XCTAssertEqual(naming.name(forEncoder: 18), "Encoder 18 (Trackball 3 Axis 2)")
+        XCTAssertEqual(naming.name(forEncoder: 9), "Encoder 9 (Trackball 1 Rotate)")
+        XCTAssertEqual(naming.name(forEncoder: 10), "Encoder 10 (Trackball 2 Rotate)")
+        XCTAssertEqual(naming.name(forEncoder: 11), "Encoder 11 (Trackball 3 Rotate)")
+        XCTAssertEqual(naming.name(forEncoder: 12), "Encoder 12 (Transport Dial)")
+        XCTAssertEqual(naming.name(forEncoder: 13), "Encoder 13 (Trackball 1 X)")
+        XCTAssertEqual(naming.name(forEncoder: 14), "Encoder 14 (Trackball 1 Y)")
+        XCTAssertEqual(naming.name(forEncoder: 15), "Encoder 15 (Trackball 2 X)")
+        XCTAssertEqual(naming.name(forEncoder: 16), "Encoder 16 (Trackball 2 Y)")
+        XCTAssertEqual(naming.name(forEncoder: 17), "Encoder 17 (Trackball 3 X)")
+        XCTAssertEqual(naming.name(forEncoder: 18), "Encoder 18 (Trackball 3 Y)")
     }
 
     func testWavePanelRecognitionUsesKnownIdentityOrDisplayShape() {
